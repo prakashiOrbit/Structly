@@ -21,7 +21,8 @@ export default function App() {
 
   return (
     <div className="flex h-screen flex-col overflow-hidden bg-[var(--color-bg)] text-[var(--color-text)]">
-      <div className="flex h-11 flex-none items-center gap-3 border-b border-[var(--color-divider)] bg-[var(--color-surface)] px-3">
+      <div className="flex h-11 flex-none items-center gap-2 border-b border-[var(--color-divider)] bg-[var(--color-surface)] px-3">
+        <img src="/logo.png" alt="" className="h-5 w-5" />
         <span className="font-semibold tracking-tight">Structly</span>
       </div>
 
