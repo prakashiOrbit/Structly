@@ -1,0 +1,17 @@
+[package]
+name = "db-sqlite"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+db-core.workspace = true
+async-trait.workspace = true
+serde_json.workspace = true
+sqlx = { workspace = true, features = ["sqlite"] }
+chrono = { version = "0.4", features = ["serde"] }
+futures-util = { version = "0.3", default-features = false, features = ["std"] }
+libsqlite3-sys = "0.30"
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }

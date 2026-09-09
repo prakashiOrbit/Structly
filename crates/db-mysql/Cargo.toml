@@ -1,0 +1,19 @@
+[package]
+name = "db-mysql"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+db-core.workspace = true
+async-trait.workspace = true
+serde_json.workspace = true
+sqlx = { workspace = true, features = ["mysql", "rust_decimal"] }
+rust_decimal = { version = "1", features = ["serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+futures-util = { version = "0.3", default-features = false, features = ["std"] }
+tokio = { workspace = true, features = ["sync"] }
+ssh-tunnel.workspace = true
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros"] }
